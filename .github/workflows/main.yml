@@ -21,5 +21,5 @@ jobs:
     - name: Push to hub
       env:
         HF: ${{ secrets.HF }}
-      run: git push --force https://Jbrcoleman:$HF@huggingface.co/spaces/Jbrcoleman/demo main
+      run: git push https://Jbrcoleman:$HF@huggingface.co/spaces/Jbrcoleman/demo main
 #test
