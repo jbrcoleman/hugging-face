@@ -22,3 +22,4 @@ jobs:
       env:
         HF: ${{ secrets.HF }}
       run: git push --force https://Jbrcoleman:$HF@huggingface.co/spaces/Jbrcoleman/demo main
+#test
