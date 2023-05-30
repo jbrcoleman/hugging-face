@@ -1,0 +1,24 @@
+name: CI
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: add remote
+      env:
+        HF: ${{ secrets.HF }}
+      run: git remote add space https://Jbrcoleman:$HF@huggingface.io/spaces/Jbrcoleman/demo
+    - name: Push to hub
+      env:
+        HF: ${{ secrets.HF }}
+        run: git push --force https://Jbrcoleman:$HF@huggingface.io/spaces/Jbrcoleman/demo main
