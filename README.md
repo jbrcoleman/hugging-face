@@ -10,4 +10,4 @@ pinned: false
 ---
 
 # hugging-face
-mlops flow for hugging face model
+mlops flow for hugging face model. This model summarizes text and uses the interface from gradio and is pushed to hugging face spaces.
